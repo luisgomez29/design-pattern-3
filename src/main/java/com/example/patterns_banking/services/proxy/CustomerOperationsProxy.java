@@ -9,6 +9,6 @@ public class CustomerOperationsProxy implements ICustomerOperations {
 
     @Override
     public boolean isValidEmail(String email) {
-        return email.toLowerCase().endsWith("@yahoo.com") ? Boolean.FALSE : Boolean.TRUE;
+        return !email.toLowerCase().contains("@yahoo");
     }
 }
