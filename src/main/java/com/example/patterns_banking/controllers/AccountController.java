@@ -19,12 +19,12 @@ public class AccountController {
     return accountService.createAccount(account);
   }
 
-  @GetMapping("/{accountId}/deposit")
+  @PostMapping("/{accountId}/deposit")
   public Account deposit(@PathVariable Long accountId, @RequestParam Double amount) {
     return accountService.deposit(accountId, amount);
   }
 
-  @GetMapping("/{accountId}/withdraw")
+  @PostMapping("/{accountId}/withdraw")
   public Account withdraw(@PathVariable Long accountId, @RequestParam Double amount) {
     return accountService.withdraw(accountId, amount);
   }
